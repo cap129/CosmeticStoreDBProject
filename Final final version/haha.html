@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  table,td,th{
+  border:solid black 1px;
+}
+</style>
+</head>
+<body>
+
+<p>Click the button to open a new window with some specifications.</p>
+
+
+<table class="itemtable" id="item_table">
+                            <tr>
+                              <th>Itemid:</th>
+                              <th>Description</th>
+                              <th>Quantity</th>
+                              <th>Price</th>
+                              <th>Total</th>
+                            </tr>
+                            <tr>
+                              <td><input type="text" size=15 class="inputtd"/></td>
+                              <td><input type="text" size=30 class="inputtd"/></td>
+                              <td><input type="text" size=5 class="inputtd"/></td>
+                              <td><input type="text" size=10 class="inputtd"/></td>
+                              <td><input type="text" size=10 class="inputtd"/></td>
+                            </tr>
+                          </table>
+<button id="inputadd" onclick="addItem()"/>Add New Item</button>
+
+<script>
+  function addItem(){
+  var tab = document.getElementById("item_table");
+  var tr = document.createElement("tr");
+    var td=document.createElement("td");
+    var input=document.createElement("input");
+    input.size="15";
+    td.appendChild(input);
+    tr.appendChild(td);
+
+        td=document.createElement("td");
+        input=document.createElement("input");
+        input.size="30";
+        td.appendChild(input);
+        tr.appendChild(td);
+
+
+        td=document.createElement("td");
+        input=document.createElement("input");
+        input.size="5";
+        td.appendChild(input);
+        tr.appendChild(td);
+
+        td=document.createElement("td");
+        input=document.createElement("input");
+        input.size="10";
+        td.appendChild(input);
+        tr.appendChild(td);
+
+        td=document.createElement("td");
+        input=document.createElement("input");
+        input.size="10";
+        td.appendChild(input);
+        tr.appendChild(td);
+
+    tab.appendChild(tr);
+}
+</script>
+
+</body>
+</html>
